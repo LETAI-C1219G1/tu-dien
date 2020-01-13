@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="eng">
+<input type="button" value="search" onclick="Search()" id="Search"  >
+<p id="result"></p>
+<script>
+let eng=["dog","cat","pig","money","Tai"];
+let vn=["cho","meo","lon","tien","dep trai"];
+function Search() {
+    let input = document.getElementById('eng').value;
+    for (let i=0;i<eng.length;i++){
+        if (input === eng[i]){
+            document.getElementById("result").innerHTML = vn[i];
+            return vn[i];
+        }
+    }
+    alert("Not found");
+    return false;
+}
+</script>
+</body>
+</html>
